@@ -45,7 +45,7 @@ This is a simple Django RESTful API built for managing fitness classes, instruct
    ```
    *On Windows:* 
    ```bash
-   venv\Scripts\activate
+   ./env/Scripts/activate
    ```
 
 3. **Install dependencies**

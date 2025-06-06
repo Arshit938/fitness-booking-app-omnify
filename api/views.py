@@ -10,7 +10,7 @@ from api.serialiser import FitnessClassSerializer,BookingSerializer
 class GetAllUpcomingClasses(APIView):
     def get(self,request):
         try:
-            objs = FitnessClass.objects.all().order_by("-scheduled_start_time")
+            objs = FitnessClass.objects.all().order_by("scheduled_start_time")
             lst = []
             lst = [i for i in objs if i.scheduled_start_time >= timezone.now()]
             ser = FitnessClassSerializer(lst,many=True)
